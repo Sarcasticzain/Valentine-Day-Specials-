@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Love 💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <div class="hearts-bg" id="heartsContainer"></div>
+
+    <div class="container">
+        <header>
+            <h1>💕 To My One & Only 💕</h1>
+            <p class="subtitle">A journey through our love story</p>
+        </header>
+
+        <!-- Countdown Timer -->
+        <div class="card">
+            <div class="card-content">
+                <h2>⏰ Our Time Together ⏰</h2>
+                <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem;">Every moment with you is precious</p>
+                
+                <div class="countdown-container">
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="days">0</div>
+                        <div class="countdown-label">Days Together</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="hours">0</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="minutes">0</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="seconds">0</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <h3 style="text-align: center; font-family: 'Caveat', cursive; font-size: 2rem; color: var(--terracotta); margin-bottom: 20px;">Upcoming Adventures</h3>
+                    <div class="milestone">
+                        <h3>🌹 Next Date Night</h3>
+                        <p>This Saturday - Surprise dinner at that place you've been wanting to try!</p>
+                    </div>
+                    <div class="milestone">
+                        <h3>✈️ Summer Vacation</h3>
+                        <p>June 2026 - Beach getaway (start packing your bikini!)</p>
+                    </div>
+                    <div class="milestone">
+                        <h3>💍 Forever & Always</h3>
+                        <p>Every day with you is a milestone worth celebrating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div class="card">
+            <div class="card-content">
+                <h2>📸 Our Beautiful Moments 📸</h2>
+                <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem;">Each photo tells our story</p>
+                
+                <div class="photo-gallery">
+                    <div class="photo-slide active">
+                        <img src="./assets/img/photo1.png" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;" alt="Our Photo">
+                        <div class="photo-caption">"The day we first met - I knew you were special from that smile"</div>
+                    </div>
+                    <div class="photo-slide">
+                        <img src="./assets/img/photo2.png" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;" alt="Our Photo">
+                        <div class="photo-caption">"Our first date - nervous but so happy to be with you"</div>
+                    </div>
+                    <div class="photo-slide">
+                        <img src="./assets/img/photo3.png" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;" alt="Our Photo">
+                        <div class="photo-caption">"That spontaneous road trip - best adventure ever!"</div>
+                    </div>
+                    <div class="photo-slide">
+                        <img src="./assets/img/photo4.png" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;" alt="Our Photo">
+                        <div class="photo-caption">"Just a random Tuesday, but perfect because I was with you"</div>
+                    </div>
+                    <div class="photo-slide">
+                        <img src="./assets/img/photo5.png" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px;" alt="Our Photo">
+                        <div class="photo-caption">"The moment I realized I'm completely in love with you"</div>
+                    </div>
+                </div>
+
+                <div class="gallery-controls">
+                    <button class="gallery-btn" onclick="previousPhoto()">← Previous</button>
+                    <button class="gallery-btn" onclick="nextPhoto()">Next →</button>
+                    <div class="gallery-dots">
+                        <span class="dot active" onclick="goToPhoto(0)"></span>
+                        <span class="dot" onclick="goToPhoto(1)"></span>
+                        <span class="dot" onclick="goToPhoto(2)"></span>
+                        <span class="dot" onclick="goToPhoto(3)"></span>
+                        <span class="dot" onclick="goToPhoto(4)"></span>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-top: 20px; font-size: 0.95rem; color: var(--deep-rose); opacity: 0.8;">
+                    💡 <em>Tip: Replace the photo placeholders with real images by editing the HTML!</em>
+                </p>
+            </div>
+        </div>
+
+        <!-- Music Player -->
+        <div class="card">
+            <div class="card-content">
+                <h2>🎵 Our Soundtrack 🎵</h2>
+                <div class="music-player">
+                    <div class="player-header">
+                        <h3 id="currentSong">Perfect - Ed Sheeran</h3>
+                        <p class="now-playing">The song that makes me think of you</p>
+                    </div>
+                    
+                    <div class="player-controls">
+                        <button class="player-btn" onclick="previousSong()">⏮</button>
+                        <button class="player-btn" onclick="togglePlay()" id="playBtn">▶️</button>
+                        <button class="player-btn" onclick="nextSong()">⏭</button>
+                    </div>
+
+                    <div class="playlist">
+                        <div class="playlist-item active" onclick="selectSong(0)">
+                            <div class="song-title">🎵 Perfect - Ed Sheeran</div>
+                            <div class="song-memory">Our first dance song - still gives me butterflies</div>
+                        </div>
+                        <div class="playlist-item" onclick="selectSong(1)">
+                            <div class="song-title">🎵 A Thousand Years - Christina Perri</div>
+                            <div class="song-memory">The song playing when you first said "I love you"</div>
+                        </div>
+                        <div class="playlist-item" onclick="selectSong(2)">
+                            <div class="song-title">🎵 Lover - Taylor Swift</div>
+                            <div class="song-memory">Our road trip anthem - sang it terribly together!</div>
+                        </div>
+                        <div class="playlist-item" onclick="selectSong(3)">
+                            <div class="song-title">🎵 All of Me - John Legend</div>
+                            <div class="song-memory">Makes me emotional every single time</div>
+                        </div>
+                        <div class="playlist-item" onclick="selectSong(4)">
+                            <div class="song-title">🎵 Make You Feel My Love - Adele</div>
+                            <div class="song-memory">The song that describes exactly how I feel about you</div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 20px; font-size: 0.95rem; color: var(--deep-rose); opacity: 0.8;">
+                    💡 <em>Customize with your actual songs! You can even embed real audio later.</em>
+                </p>
+            </div>
+        </div>
+
+        <!-- Animated Timeline -->
+        <div class="card">
+            <div class="card-content">
+                <h2>📖 Our Love Story Timeline 📖</h2>
+                <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem;">The journey that brought us here</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-emoji">✨</div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">January 2024</div>
+                            <h3 style="color: var(--terracotta); margin-bottom: 10px;">The First Spark</h3>
+                            <p>We met at [place] and I couldn't stop smiling. Little did I know, my life was about to change forever.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-emoji">💕</div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">February 2024</div>
+                            <h3 style="color: var(--terracotta); margin-bottom: 10px;">First Date Magic</h3>
+                            <p>Our first official date. I was so nervous but you made everything feel so natural and right.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-emoji">❤️</div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">April 2024</div>
+                            <h3 style="color: var(--terracotta); margin-bottom: 10px;">Falling Deeper</h3>
+                            <p>The moment I realized this wasn't just a crush - I was genuinely falling in love with you.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-emoji">🌹</div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">July 2024</div>
+                            <h3 style="color: var(--terracotta); margin-bottom: 10px;">Officially Ours</h3>
+                            <p>The day we made it official. Best decision I ever made. You're my person.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-emoji">💖</div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">February 2026</div>
+                            <h3 style="color: var(--terracotta); margin-bottom: 10px;">Today & Forever</h3>
+                            <p>Still falling more in love with you every single day. Here's to our forever, my love.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Treasure Hunt -->
+        <div class="card">
+            <div class="card-content">
+                <h2>🔐 Secret Treasure Hunt 🔐</h2>
+                <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem;">Click each treasure to unlock hidden messages just for you!</p>
+                
+                <div class="treasure-grid">
+                    <div class="treasure-box" onclick="unlockTreasure(0)">
+                        <div class="treasure-icon">🎁</div>
+                        <div class="treasure-label">Mystery 1</div>
+                    </div>
+                    <div class="treasure-box" onclick="unlockTreasure(1)">
+                        <div class="treasure-icon">💎</div>
+                        <div class="treasure-label">Mystery 2</div>
+                    </div>
+                    <div class="treasure-box" onclick="unlockTreasure(2)">
+                        <div class="treasure-icon">🌟</div>
+                        <div class="treasure-label">Mystery 3</div>
+                    </div>
+                    <div class="treasure-box" onclick="unlockTreasure(3)">
+                        <div class="treasure-icon">🔮</div>
+                        <div class="treasure-label">Mystery 4</div>
+                    </div>
+                    <div class="treasure-box" onclick="unlockTreasure(4)">
+                        <div class="treasure-icon">🏆</div>
+                        <div class="treasure-label">Mystery 5</div>
+                    </div>
+                    <div class="treasure-box" onclick="unlockTreasure(5)">
+                        <div class="treasure-icon">👑</div>
+                        <div class="treasure-label">Mystery 6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Message -->
+        <div class="card">
+            <div class="card-content">
+                <h2>🎥 A Special Message For You 🎥</h2>
+                <p style="text-align: center; margin-bottom: 20px; font-size: 1.2rem;">I wanted to tell you something in my own words...</p>
+                
+                <div class="video-container">
+                    <div class="video-placeholder" onclick="playVideo()">
+                        <div class="video-icon">▶️</div>
+                        <div class="video-text">Click to watch my message</div>
+                    </div>
+                    <div class="video-instructions">
+                        <strong>📹 How to add your video:</strong><br>
+                        Record a heartfelt video message and upload it to YouTube (unlisted) or Google Drive. 
+                        Then replace the video placeholder with an embedded video player. 
+                        Or keep it simple and just link to the video! Your voice and words will mean everything. 💕
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="card">
+            <div class="card-content">
+                <h2>❤️ How Well Do You Know Me? ❤️</h2>
+                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">Let's see how much attention you've been paying! 😊</p>
+                
+                <div class="quiz-question">
+                    <h3>1. What's my favorite way to spend a lazy Sunday?</h3>
+                    <div class="quiz-options" data-correct="0">
+                        <div class="quiz-option" data-answer="0">Cuddling on the couch watching movies</div>
+                        <div class="quiz-option" data-answer="1">Going on an adventure outdoors</div>
+                        <div class="quiz-option" data-answer="2">Trying out a new restaurant</div>
+                        <div class="quiz-option" data-answer="3">Sleeping in until noon</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>2. What's the thing I love most about us?</h3>
+                    <div class="quiz-options" data-correct="0">
+                        <div class="quiz-option" data-answer="0">How we can laugh together about anything</div>
+                        <div class="quiz-option" data-answer="1">Our deep conversations</div>
+                        <div class="quiz-option" data-answer="2">The adventures we go on</div>
+                        <div class="quiz-option" data-answer="3">How we support each other</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>3. What's my comfort food when I'm feeling down?</h3>
+                    <div class="quiz-options" data-correct="0">
+                        <div class="quiz-option" data-answer="0">Pizza and ice cream</div>
+                        <div class="quiz-option" data-answer="1">Homemade soup</div>
+                        <div class="quiz-option" data-answer="2">Chocolate and coffee</div>
+                        <div class="quiz-option" data-answer="3">Pasta with lots of cheese</div>
+                    </div>
+                </div>
+
+                <button onclick="checkQuiz()">Check My Answers!</button>
+
+                <div class="quiz-result" id="quizResult">
+                    <h3 style="font-family: 'Caveat', cursive; font-size: 2rem; color: var(--terracotta); margin-bottom: 15px;">Your Score:</h3>
+                    <div class="score-display" id="scoreDisplay"></div>
+                    <p id="resultMessage"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Memory Game -->
+        <div class="card">
+            <div class="card-content">
+                <h2>💑 Memory Match Game 💑</h2>
+                <p style="text-align: center; margin-bottom: 20px; font-size: 1.1rem;">Match the pairs of love!</p>
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span style="font-size: 1.1rem; color: var(--deep-rose);">Moves: <strong id="moves">0</strong> | Matches: <strong id="matches">0/8</strong></span>
+                </div>
+                <div class="memory-grid" id="memoryGrid"></div>
+                <button onclick="resetMemoryGame()">Play Again!</button>
+            </div>
+        </div>
+
+        <!-- Love Coupons -->
+        <div class="card">
+            <div class="card-content">
+                <h2>💝 Love Coupons 💝</h2>
+                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">Click to reveal your special surprises!</p>
+                <div class="coupons-grid">
+                    <div class="coupon" onclick="scratchCoupon(this)">
+                        <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
+                        <div class="coupon-content">
+                            <strong>Free Hug</strong>
+                            Valid anytime, anywhere! Redeemable unlimited times ❤️
+                        </div>
+                    </div>
+                    <div class="coupon" onclick="scratchCoupon(this)">
+                        <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
+                        <div class="coupon-content">
+                            <strong>Movie Night</strong>
+                            Your choice of movie + snacks + cuddles 🎬
+                        </div>
+                    </div>
+                    <div class="coupon" onclick="scratchCoupon(this)">
+                        <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
+                        <div class="coupon-content">
+                            <strong>Breakfast in Bed</strong>
+                            I'll cook your favorite! ☕🥞
+                        </div>
+                    </div>
+                    <div class="coupon" onclick="scratchCoupon(this)">
+                        <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
+                        <div class="coupon-content">
+                            <strong>Date Night</strong>
+                            Surprise date planned by me! 🌹
+                        </div>
+                    </div>
+                    <div class="coupon" onclick="scratchCoupon(this)">
+                        <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
+                        <div class="coupon-content">
+                            <strong>Back Massage</strong>
+                            30 minutes of pure relaxation 💆
+                        </div>
+                    </div>
+                    <div class="coupon" onclick="scratchCoupon(this)">
+                        <div class="coupon-overlay">✨ SCRATCH ME! ✨</div>
+                        <div class="coupon-content">
+                            <strong>Dishes Pass</strong>
+                            I'll do the dishes for a week! 🧽
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Love Letter -->
+        <div class="card">
+            <div class="card-content">
+                <h2>💌 Final Words From My Heart 💌</h2>
+                <div class="love-letter">
+                    <p>My Dearest Love,</p>
+                    <p>Creating this website has been a journey through all our beautiful memories. Every game, every photo, every song reminds me why I fell so deeply in love with you.</p>
+                    <p>You make every single day brighter. Your laugh is my favorite sound. Your smile lights up my entire world. Your presence is my safe haven.</p>
+                    <p>Thank you for being my partner in crime, my best friend, my biggest supporter, and the love of my life. I can't wait to create a million more memories with you.</p>
+                    <p>Happy Valentine's Day, my forever person. I love you more than all the words on this page could ever express. 💕</p>
+                    <div class="signature">Forever & Always Yours,<br/>[Your Name] ✨</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for treasure messages -->
+    <div class="modal" id="treasureModal">
+        <div class="modal-content">
+            <div class="modal-emoji" id="modalEmoji"></div>
+            <div class="modal-message" id="modalMessage"></div>
+            <button class="modal-close" onclick="closeModal()">Close ❤️</button>
+        </div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
